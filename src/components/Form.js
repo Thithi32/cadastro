@@ -64,8 +64,6 @@ class Form extends Component {
   render() {
     const person = this.getPerson();
 
-    console.log('::::::', person);
-
     const ageOptions = ['13-19', '20-29', '30-44', '45 e acima'];
 
     return (

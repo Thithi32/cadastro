@@ -8,7 +8,7 @@ const Confirm = (props) => {
       <aside>
         { person.avatar &&
           <button href="#" onClick={edit}>
-            <img src={URL.createObjectURL(props.person.avatar)} style={{ width: 100, height: 100 }} alt="Avatar" />
+            <img src={URL.createObjectURL(person.avatar)} style={{ width: 100, height: 100 }} alt="Avatar" />
           </button>
         }
       </aside>
@@ -16,22 +16,22 @@ const Confirm = (props) => {
         <p>
           Eu sou o {person.firstName} {person.lastName}
           { person.age &&
-            <span>&nbsp;e eu tenho mais de {person.age.substr(0, 2)} anos</span>
+            <span>&nbsp;e eu tenho mais de <strong>{person.age.substr(0, 2)}</strong> anos</span>
           }
           { person.email &&
-            <span>&nbsp;e você pode enviar e-mails para {person.email}.</span>
+            <span>&nbsp;e você pode enviar e-mails para <strong>{person.email}</strong>.</span>
           }
           { person.state &&
-            <span>&nbsp;Eu moro no estado do {person.state}.</span>
+            <span>&nbsp;Eu moro no estado do <strong>{person.state}</strong>.</span>
           }
           { person.insterests &&
-            <span>&nbsp;Eu gosto de {person.interests.join(', ')}.</span>
+            <span>&nbsp;Eu gosto de <strong>{person.interests.join(', ')}</strong>.</span>
           }
           { person.subscription &&
             <span>&nbsp;Por favor me envie newletters.</span>
           }
           { person.phone &&
-            <span>&nbsp;Para me contatar ligue no telefone {person.phone}.</span>
+            <span>&nbsp;Para me contatar ligue no telefone <strong>{person.phone}</strong>.</span>
           }
         </p>
         <button onClick={props.confirm} type="button">
@@ -45,9 +45,7 @@ const Confirm = (props) => {
 Confirm.propTypes = {
   confirm: PropTypes.func.isRequired,
   edit: PropTypes.func.isRequired,
-  person: PropTypes.shape({
-    avatar: PropTypes.shape({}),
-  }).isRequired,
+  person: PropTypes.shape({}).isRequired,
 };
 
 export default Confirm;
