@@ -20,7 +20,7 @@ const Confirm = (props) => {
       </aside>
       <section>
         <p>
-          Eu sou o {person.firstName} {person.lastName}
+          Eu sou o <strong>{person.firstName} {person.lastName}</strong>
           { person.age &&
             <span>&nbsp;e eu tenho mais de <strong>{person.age.substr(0, 2)}</strong> anos</span>
           }
