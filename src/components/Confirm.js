@@ -7,9 +7,15 @@ const Confirm = (props) => {
     <div className="Home">
       <aside>
         { person.avatar &&
-          <button href="#" onClick={edit}>
+          <div>
             <img src={URL.createObjectURL(person.avatar)} style={{ width: 100, height: 100 }} alt="Avatar" />
-          </button>
+            <button onClick={edit}>
+              Editar perfil
+            </button>
+            <button onClick={edit}>
+              Editar photo
+            </button>
+          </div>
         }
       </aside>
       <section>
