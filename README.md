@@ -1,7 +1,7 @@
 # cadastro
 Simple Create React App example
 
-http://localhost:4200/connect
+http://localhost:4300/connect
 
 # How to run
 
